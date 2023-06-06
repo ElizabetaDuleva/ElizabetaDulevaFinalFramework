@@ -17,6 +17,7 @@ public class TestUtil {
     public String appURL, browser;
     public int implicitWait;
 
+
     @AfterMethod
     public void tearDown(){
         driver.quit();

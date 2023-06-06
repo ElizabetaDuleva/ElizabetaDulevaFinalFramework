@@ -34,19 +34,19 @@ public class SuccessfulLoginTest extends TestUtil {
         WebElement loginButton = driver.findElement(By.id("login-button"));
         loginButton.click();
 
-        //WebElement productPage = driver.findElement(By.className("title"));
-        //Assert.assertTrue(productPage.isDisplayed());
+        WebElement productPage = driver.findElement(By.className("title"));
+        Assert.assertTrue(productPage.isDisplayed());
 
-        //WebElement menuBtn = driver.findElement(By.id("react-burger-menu-btn"));
-        //Assert.assertTrue(menuBtn.isDisplayed());
-        //menuBtn.click();
+        WebElement menuBtn = driver.findElement(By.id("react-burger-menu-btn"));
+        Assert.assertTrue(menuBtn.isDisplayed());
+        menuBtn.click();
 
-        //WebElement logoutLink = driver.findElement(By.id("logout_sidebar_link"));
+        WebElement logoutLink = driver.findElement(By.id("logout_sidebar_link"));
 
-        //FluentWait fluentWait = new FluentWait(driver)
-          //      .pollingEvery(Duration.ofSeconds(3));
-        //fluentWait.until(ExpectedConditions.elementToBeClickable(logoutLink));
-        //Assert.assertTrue(logoutLink.isDisplayed());
+        FluentWait fluentWait = new FluentWait(driver)
+                .pollingEvery(Duration.ofSeconds(3));
+        fluentWait.until(ExpectedConditions.elementToBeClickable(logoutLink));
+        Assert.assertTrue(logoutLink.isDisplayed());
 
     }
     @DataProvider(name = "correctUsers")
